@@ -5,7 +5,7 @@ import { getSocialCard } from "../redux/Thunk/social";
 
 const SocialPage = () => {
   const dispatch = useDispatch();
-  const favoriteCards = useSelector((state) => state.cards.favoriteCards);
+  const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
     dispatch(getSocialCard());

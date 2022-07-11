@@ -5,7 +5,7 @@ import { getRelaxCard } from "../redux/Thunk/relaxation";
 
 const RelaxationPage = () => {
   const dispatch = useDispatch();
-  const favoriteCards = useSelector((state) => state.cards.favoriteCards);
+  const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
     dispatch(getRelaxCard());

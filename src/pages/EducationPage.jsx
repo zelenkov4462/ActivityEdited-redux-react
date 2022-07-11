@@ -6,7 +6,7 @@ import { getRandomCard } from "../redux/Thunk/random";
 
 const EducationPage = () => {
   const dispatch = useDispatch();
-  const favoriteCards = useSelector((state) => state.cards.favoriteCards);
+  const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
     dispatch(getEducationCard());

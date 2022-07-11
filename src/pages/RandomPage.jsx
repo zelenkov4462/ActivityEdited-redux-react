@@ -5,7 +5,7 @@ import CardItem from "../components/CardItem";
 
 const RandomPage = () => {
   const dispatch = useDispatch();
-  const favoriteCards = useSelector((state) => state.cards.favoriteCards);
+  const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
     dispatch(getRandomCard());

@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFavoriteCardAction } from "../redux/Actions/ActionCreators/removeFavoriteCardAction";
+import { removeFavoriteCard } from "../redux/toolkitSlice";
 
 const FavoritePage = () => {
-  const favoriteCards = useSelector((state) => state.cards.favoriteCards);
+  const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
   const dispatch = useDispatch();
+  console.log(favoriteCards);
   return (
     <div>
       {favoriteCards.map((card, index) => (
@@ -14,9 +15,7 @@ const FavoritePage = () => {
               {index + 1}. {card.activity}
               <h3>type: {card.type}</h3>
             </div>
-            <button
-              onClick={() => dispatch(removeFavoriteCardAction(card.key))}
-            >
+            <button onClick={() => dispatch(removeFavoriteCard(card.key))}>
               Удалить
             </button>
           </li>
