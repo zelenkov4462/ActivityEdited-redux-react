@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getRandomCard } from "../redux/Thunk/random";
+import { getRandomCard, getRandomCardAsync } from "../redux/Thunk/random";
 import { useDispatch, useSelector } from "react-redux";
 import CardItem from "../components/CardItem";
 
@@ -8,13 +8,13 @@ const RandomPage = () => {
   const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
-    dispatch(getRandomCard());
+    dispatch(getRandomCardAsync());
   }, [favoriteCards]);
 
   return (
     <div>
       <CardItem />
-      <button onClick={() => dispatch(getRandomCard())}>Next</button>
+      <button onClick={() => dispatch(getRandomCardAsync())}>Next</button>
     </div>
   );
 };

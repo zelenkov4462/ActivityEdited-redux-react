@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import CardItem from "../components/CardItem";
 import { useDispatch, useSelector } from "react-redux";
-import { getSocialCard } from "../redux/Thunk/social";
+import { getSocialCard, getSocialCardAsync } from "../redux/Thunk/social";
 
 const SocialPage = () => {
   const dispatch = useDispatch();
   const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
-    dispatch(getSocialCard());
+    dispatch(getSocialCardAsync());
   }, [favoriteCards]);
   return (
     <div>
       <CardItem />
-      <button onClick={() => dispatch(getSocialCard())}>Next</button>
+      <button onClick={() => dispatch(getSocialCardAsync())}>Next</button>
     </div>
   );
 };

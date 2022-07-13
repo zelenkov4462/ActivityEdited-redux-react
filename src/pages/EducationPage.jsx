@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import CardItem from "../components/CardItem";
 import { useDispatch, useSelector } from "react-redux";
-import { getEducationCard } from "../redux/Thunk/education";
+import {
+  getEducationCard,
+  getEducationCardAsync,
+} from "../redux/Thunk/education";
 import { getRandomCard } from "../redux/Thunk/random";
 
 const EducationPage = () => {
@@ -9,13 +12,13 @@ const EducationPage = () => {
   const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
 
   useEffect(() => {
-    dispatch(getEducationCard());
+    dispatch(getEducationCardAsync());
   }, [favoriteCards]);
 
   return (
     <div>
       <CardItem />
-      <button onClick={() => dispatch(getEducationCard())}>Next</button>
+      <button onClick={() => dispatch(getEducationCardAsync())}>Next</button>
     </div>
   );
 };

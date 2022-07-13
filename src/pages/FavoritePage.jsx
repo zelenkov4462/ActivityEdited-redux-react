@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFavoriteCard } from "../redux/toolkitSlice";
+import { removeFavoriteCard } from "../redux/reducers/slices/toolkitSlice";
 
 const FavoritePage = () => {
   const favoriteCards = useSelector((state) => state.toolkit.favoriteCards);
