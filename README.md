@@ -10,7 +10,7 @@ React, ReduxToolkit, react-router-dom.
 
 Выполнил рефакторинг для Redux Toolkit.
 
-Роутинг - у каждого вида активности своя страница.
+Routing - у каждого вида активности своя страница.
 
 ![5 1](https://user-images.githubusercontent.com/101303690/186932310-1340611f-9b25-41d0-9635-d3e19205df4a.png)
 
