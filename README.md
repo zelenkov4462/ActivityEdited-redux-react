@@ -10,7 +10,16 @@ React, ReduxToolkit, react-router-dom.
 
 Выполнил рефакторинг для Redux Toolkit.
 
+Роутинг - у каждого вида активности своя страница.
+
 ![5 1](https://user-images.githubusercontent.com/101303690/186932310-1340611f-9b25-41d0-9635-d3e19205df4a.png)
+
+На каждой карточке есть 2 кнопки - "Next" (Показать следующую активность этого вида) и "Добавить в избранное".
+
 ![5 2](https://user-images.githubusercontent.com/101303690/186932314-11f22ebb-59a3-4f2c-bef0-1e8ee24d01ca.png)
+
+Список избранных карточек - отдельная страница. 
+Так же возможно уудаление карточек из этого списка.
+
 ![5 3](https://user-images.githubusercontent.com/101303690/186932318-d30b4499-a2a8-4fe9-9938-0511c7dfb967.png)
 
